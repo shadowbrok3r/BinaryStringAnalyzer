@@ -2,10 +2,10 @@
 Add-Type -Path "E:\Users\darkm\Desktop\BinaryStringAnalyzer\Mono.Cecil.dll"
 
 # Load the assembly using Mono.Cecil
-$assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly("E:\Users\darkm\Desktop\BinaryStringAnalyzer\Crossgems\CrossGemsCM.dll")
+$assembly = [Mono.Cecil.AssemblyDefinition]::ReadAssembly("E:\Users\darkm\Desktop\Crossgems\CrossGemsCM.dll")
 
 # Define the strings you're looking for
-$searchStrings = @("CrossGemsCM.Licensing", "CrossGems.Ui", "Fingerprint", "Cryptography")
+$searchStrings = @("CrossGemsCM.Licensing", "CrossGems.Ui", "Fingerprint", "Cryptography", "Hash")
 
 # Loop over each type in the assembly
 foreach ($type in $assembly.MainModule.Types) {
